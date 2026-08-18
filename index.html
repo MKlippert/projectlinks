@@ -74,17 +74,22 @@
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    transition: transform 0.12s ease,
+            background-color 0.12s ease,
+            color 0.12s ease;
   }
 
-  a.link:hover,
-  a.link:focus-visible {
-    transform: translateY(-2px);
-    background: var(--primary);
-    color: #ffffff;
-    outline: none;
-  }
-
+a.link:focus-visible {
+  background: var(--primary);
+  color: #ffffff;
+  outline: none;
+}
+  a.link:active {
+  transform: scale(0.98);
+  background: var(--primary);
+  color: #ffffff;
+}
+  
   a.link .icon {
     font-size: 18px;
     width: 22px;
@@ -112,10 +117,6 @@
   </main>
 
   <script>
-    // ---------------------------------------------------------
-    // HIER DEINE LINKS EINTRAGEN
-    // icon: ein Emoji, label: sichtbarer Text, url: Ziel-Link
-    // ---------------------------------------------------------
     const links = [
       { icon: "🌐", label: "Project Website", url: "https://www.trr419-sharp.de/de/projektbereiche/projektbereich-b/teilprojekt-b04" },
       { icon: "📄", label: "Poster References", url: "https://syncandshare.lrz.de/getlink/fiWmUdVfpvxuJLsCCiH3ff/References.pdf" },
